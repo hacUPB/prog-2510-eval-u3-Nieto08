@@ -1,5 +1,6 @@
 orden= int(input("desea agregar otro plato?\n1. si \n2. no\n"))
-while (orden!=2):
+orden_n= ("no ha seleccionado ningun plato")
+while (orden==1):
     print ("todos los platos vienen con la sopa del dia")
     orden_n= ("B. Bandeja paisa\nP. Pastel de garbanzo\nD. plato del dia\nE. ejecutivo\nS. solo sopa").upper()
     print("la sopa del dia es: sopa de ahuyama\n1. 1/2 de ahuyama\n2. ajo en polvo\n3. 1/2 zanahoria\n4. sal y especias")
@@ -17,7 +18,7 @@ while (orden!=2):
              print("")
         case _:
             print("no ha seleccionado plato")
-print("la orden es {orden_n}")
+print(f"la orden es {orden_n}")
 print ("fin")
 
             
