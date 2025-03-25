@@ -1,15 +1,42 @@
 import random
+precio= 0 
 titulo= str(input("es usted señor a señora: ")).lower()
 while titulo not in ["sr", "sra", "señor", "señora"]: #informacion sacada de deepseek, evalúa sí titulo está bien escrito.
     titulo= input("por favor ser más clar@, es usted señor o señora: ") 
-nombre= str(input("por favor digame sus nombres y apellidos: "))
+while True:
+    try:
+        nombre=input("por favor digame sus nombres y apellidos: ")
+        if any(c.isdigit() for c in nombre):  #validacion de números
+            print("el nombre contiene números")
+        else:
+            break
+    except ValueError:
+        print("error, no ingresó ningun nombre") 
 print("*"*50)
 print (f"Bienvenido {titulo} {nombre} a aerolineas hello world")
 print("*"*50)
-destino= int(input("seleccione el número asignado a su destino: \n1. Medellín\n2. Bogotá\n3. cartagena.\n:* "))
+while True:
+    try: 
+        destino= int(input("seleccione el número asignado a su destino: \n1. Medellín\n2. Bogotá\n3. cartagena.\n:* "))
+        if destino in range(1,4):
+            break
+        else:
+            print("por favor ingrese un numero entre 1 y 3:")
+            destino= int(input("* "))
+    except ValueError: 
+        print("por favor ingresar el número asignado")
 while destino not in range (1,4):
     destino= int(input("seleccione un número válido, asignado a su destino: \n1. Medellín\n2. Bogotá\n3. cartagena.\n:* "))
-origen= int(input("seleccione el número asignado de su origen: \n1. Medellín\n2. Bogotá\n3. cartagena.\n:* "))
+while True: 
+    try: 
+        origen= int(input("seleccione el número asignado de su origen: \n1. Medellín\n2. Bogotá\n3. cartagena.\n:* "))
+        if origen in range (1,4):
+            break
+        else:
+            print("por favor ingrese un número entre 1 y 3:")
+            origen= int(input("* "))
+    except ValueError: 
+        print("error de informacion, ingrese por favor un número entero")
 while origen not in range (1,4):
     origen= int(input("seleccione un número válido, asignado de su origen: \n1. Medellín\n2. Bogotá\n3. cartagena.\n:* "))
 cont= 0
@@ -40,7 +67,15 @@ while destino!= origen and cont == 0:
     elif destino or origen== 2 and origen or destino== 3: 
         distancia= 657  
     cont+= 1
-diad=int(input("seleccione un número asignado a un dia: \n1. lunes\n2. martes\n3. miercoles\n4. jueves\n5. viernes\n6. sábado\n7. Domingo\n*"))
+while True:
+    try: 
+        diad=int(input("seleccione un número asignado a un dia: \n1. lunes\n2. martes\n3. miercoles\n4. jueves\n5. viernes\n6. sábado\n7. Domingo\n*"))
+        if diad not in range(1,4):
+            print("por favor poner un número válido")
+        else:
+            break
+    except ValueError:
+        print("Error, por favor ingrese un número entero")
 if diad== 1:
     dia= "Lunes"
 elif diad== 2:
@@ -55,7 +90,7 @@ elif diad== 6:
     dia= "Sábado"
 elif diad== 7:
     dia= "Domingo"
-mesd=int(input("escriba el mes del vuelo :\n1. enero\n2. febrero\n3. marzo\n4. abril\n5. mayo\n6. junio\n7. julio\n8. agosto\n9. septiembre\n10. octubre\n11. noviembre\n12. diciembre\n* "))
+mesd=(input("escriba el mes del vuelo :\n1. enero\n2. febrero\n3. marzo\n4. abril\n5. mayo\n6. junio\n7. julio\n8. agosto\n9. septiembre\n10. octubre\n11. noviembre\n12. diciembre\n* "))
 for i in range (diad):
     if i in range (1,4):
         if distancia<400:
@@ -67,7 +102,14 @@ for i in range (diad):
             precio= 119,900
         elif distancia>=400:
             precio= 213,000
-asiento_tip= int(input("prefiere un asiente \n1. en pasillo pasillo\n2. junto a la ventana\n3. no tiene preferencia\ningrese el numero de su preferencia: "))
+while True:
+    try: 
+        asiento_tip= int(input("prefiere un asiente \n1. en pasillo pasillo\n2. junto a la ventana\n3. no tiene preferencia\ningrese el numero de su preferencia: "))
+        if asiento_tip not in range(1,4):
+            print("por favor ingresar un número entre 1 y 3: ")
+            asiento_tip= int(input("* "))
+    except ValueError:
+        print("error de informacion, ingrese por favor un número entero")
 if asiento_tip==1:
     asiento_tip= "C"
 elif asiento_tip==2:
