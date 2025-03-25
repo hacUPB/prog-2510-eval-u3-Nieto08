@@ -108,6 +108,8 @@ while True:
         if asiento_tip not in range(1,4):
             print("por favor ingresar un número entre 1 y 3: ")
             asiento_tip= int(input("* "))
+        else:
+            break
     except ValueError:
         print("error de informacion, ingrese por favor un número entero")
 if asiento_tip==1:
