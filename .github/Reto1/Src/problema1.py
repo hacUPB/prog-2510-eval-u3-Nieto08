@@ -10,7 +10,7 @@ destino= int(input("seleccione el número asignado a su destino: \n1. Medellín\
 while destino not in range (1,4):
     destino= int(input("seleccione un número válido, asignado a su destino: \n1. Medellín\n2. Bogotá\n3. cartagena.\n:* "))
 origen= int(input("seleccione el número asignado de su origen: \n1. Medellín\n2. Bogotá\n3. cartagena.\n:* "))
-while origen not in range (1,3):
+while origen not in range (1,4):
     origen= int(input("seleccione un número válido, asignado de su origen: \n1. Medellín\n2. Bogotá\n3. cartagena.\n:* "))
 cont= 0
 if destino == origen:
@@ -80,4 +80,3 @@ else:
 numero= random.randint(1,29) #genera un número random entre el 1 y el 29
 asiento_ram= (f"{numero}{asiento_tip}")
 print(f"Gracias por elegirnos sobre avianca, {titulo} {nombre}, su vuelo desde {origent} con destino a {destinot} está confirmado para el dia {dia} del mes {mesd} a un costo de ${precio} pesos, con el asiento asignado de {asiento_ram}")
-
