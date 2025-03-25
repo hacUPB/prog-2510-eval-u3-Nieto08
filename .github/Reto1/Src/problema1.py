@@ -45,15 +45,15 @@ if diad== 1:
     dia= "Lunes"
 elif diad== 2:
     dia= "Martes"
-if diad== 3:
+elif diad== 3:
     dia= "Miércoles"
-if diad== 4:
+elif diad== 4:
     dia= "Jueves"
-if diad== 5:
+elif diad== 5:
     dia= "Viernes"
-if diad== 6:
+elif diad== 6:
     dia= "Sábado"
-if diad== 7:
+elif diad== 7:
     dia= "Domingo"
 mesd=int(input("escriba el mes del vuelo :\n1. enero\n2. febrero\n3. marzo\n4. abril\n5. mayo\n6. junio\n7. julio\n8. agosto\n9. septiembre\n10. octubre\n11. noviembre\n12. diciembre\n* "))
 for i in range (diad):
