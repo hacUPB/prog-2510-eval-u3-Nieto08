@@ -70,7 +70,7 @@ while destino!= origen and cont == 0:
 while True:
     try: 
         diad=int(input("seleccione un número asignado a un dia: \n1. lunes\n2. martes\n3. miercoles\n4. jueves\n5. viernes\n6. sábado\n7. Domingo\n*"))
-        if diad not in range(1,4):
+        if diad not in range(1,8):
             print("por favor poner un número válido")
         else:
             break
@@ -90,7 +90,15 @@ elif diad== 6:
     dia= "Sábado"
 elif diad== 7:
     dia= "Domingo"
-mesd=(input("escriba el mes del vuelo :\n1. enero\n2. febrero\n3. marzo\n4. abril\n5. mayo\n6. junio\n7. julio\n8. agosto\n9. septiembre\n10. octubre\n11. noviembre\n12. diciembre\n* "))
+while True:
+    try:
+        mesd=int((input("escriba el mes del vuelo :\n1. enero\n2. febrero\n3. marzo\n4. abril\n5. mayo\n6. junio\n7. julio\n8. agosto\n9. septiembre\n10. octubre\n11. noviembre\n12. diciembre\n* ")))
+        if mesd not in range(1,13):
+            print("elegir un número valido")
+        else:
+            break
+    except ValueError:
+        print("Error, Ingrese un valor entre 1 y 12")   
 for i in range (diad):
     if i in range (1,4):
         if distancia<400:
