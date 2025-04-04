@@ -1,0 +1,26 @@
+altitud inicial = ho
+coeficiente de arrastre = coef 
+altitud mínima de seguridad = hs
+altitud actual= ha 
+altitud perdida= hper
+estabilizado = falso 
+reingreso= falso
+INICIO
+1. leer ho, coef, hs 
+2. hacer ha = ho 
+3. guardar orb= 0
+4. mientras estabilizado == falso y reingreso == falso
+5. 	hper= coef*ha
+6. 	ha= ha - hper
+7.   si ha < hs
+8.		guardar reingreso= verdadero
+10.  si hper <= 0.00001
+11.		guardar estabilizado= verdadero  
+12.  orb= orb + 1
+13. fin del mientras
+14. si reingreso == verdadero
+15.    razon= ("Reingreso")
+16. else
+17.    razon= ("la pérdida es muy pequeña")
+18. mostrar ha y orb
+FIN 
