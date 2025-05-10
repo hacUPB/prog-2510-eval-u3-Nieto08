@@ -2,7 +2,7 @@ Sistema de reserva de aerolineas (pseudocódigo)
 INICIO
 1. leer título, nombre, origen, destino, diad y mesd.
 2. mostrar saludo
-3. mientras diad mayor a 0 o diadn mmenor o igual que 31
+3. mientras diad mayor a 0 o diad menor o igual que 31  #comprobación
 4. dist= destino-origen 
 5.  Si dist es menor que 400
 6.      si diad entre luenes a jueves: 
