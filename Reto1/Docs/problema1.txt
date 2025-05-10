@@ -16,5 +16,6 @@ INICIO
 15.         precio= 213.000
 16. leer asiento_tip
 17. mostrar asiento_ram
-18. mostrar nombre, origen, destino, diad, mesd, precio y asiento_ram      
+18. mostrar nombre, origen, destino, diad, mesd, precio y asiento_ram  
+FIN    
 
